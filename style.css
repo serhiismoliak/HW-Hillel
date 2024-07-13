@@ -1,0 +1,24 @@
+/* Селектор елемента */
+li {
+    color: brown;
+}
+
+/* Селектор класу */
+.blue {
+    color: blue;
+}
+
+/* Селектор ID */
+#id-selector {
+    color: magenta;
+}
+
+/* Селектор атрибутів */
+a[target="_blank"] {
+    color: red;
+}
+
+/* Селектор вкладеності */
+p > span {
+    color: orange;
+}
