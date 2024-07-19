@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles">
+    <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div class="screen">
-        <section class="section">
-            <div class="outer-container">
-                <div class="inner-container">
-                    <div class="item large-box">1</div>
-                    <div class="item large-box">2</div>
-                </div>
-                <div class="inner-container"></div>
-                <div class="inner-container"></div>
+    <main class="section">
+        <div class="outer-container">
+            <div class="inner-container">
+                <div class="item large-box pos-left">1</div>
+                <div class="item large-box pos-left">2</div>
             </div>
-        </section>
-    </div>
+            <div class="inner-container">
+                <div class="item large-box pos-left">1</div>
+                <div class="item small-box pos-right">2</div>
+                <div class="item small-box pos-right">5</div>
+                <div class="item small-box pos-right">4</div>
+                <div class="item small-box pos-right">3</div>
+            </div>
+            <div class="inner-container">
+                <div class="item large-box pos-left">1</div>
+                <div class="item large-box pos-left">2</div>
+                <div class="item large-box pos-right">4</div>
+                <div class="item large-box pos-right">3</div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
