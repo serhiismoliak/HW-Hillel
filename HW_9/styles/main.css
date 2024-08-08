@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+:root {
+    --midnight: #333333;
+    --white: #FFFFFF;
+    --black: #000000;
+    --light-gray: #EFEFEF;
+    --red: #FC8F8F;
+}
+.container {
+    max-width: 1100px;
+}
+.site-links {
+    display: flex;
+    gap: 30px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 16px 8px;
+}
+.category-links {
+    display: flex;
+    gap: 40px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 30px 8px;
+}
+.site-links a {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    text-align: left;
+    color: var(--midnight);
+    text-decoration: none;
+}
+.category-links a {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    text-align: left;
+    color: var(--black);
+    text-decoration: none;
+}
+.nav-section-gray {
+    background-color: var(--light-gray);
+}
