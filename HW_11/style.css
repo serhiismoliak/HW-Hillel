@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+:root {
+    --white: #FFFFFF;
+    --gray-black: #333333;
+    --light-blue: #4a86e8;
+    --dark-blue: #135693;
+    --light-gray: #EFEFEF;
+    --hr-hight: 7px;
+}
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.border {
+    height: var(--hr-hight);
+    border-width: 0;
+    margin: 0;
+    color: var(--light-blue);
+    background-color: var(--light-blue);
+}
+.bg-black {
+    background-color: var(--gray-black);
+}
+.nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.link {
+    display: inline-block;
+    color: var(--light-gray);
+    min-width: 100px;
+    text-align: center;
+    padding: 20px 30px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.link:hover {
+    background-color: var(--light-blue);
+}
+.menu-action {
+    position: relative;
+}
+.wrap-menu {
+    position: absolute;
+    display: none;
+}
+.nav-wrap > li {
+    position: relative;
+}
+
+.wrap-nested-menu {
+    box-sizing: border-box;
+    color: var(--light-gray);
+    border: 1px solid var(--dark-blue);
+    background-color: var(--light-blue);
+    min-width: 100px;
+    text-align: center;
+    padding: 20px 30px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.nav-wrap > li:hover .wrap-menu {
+    display: block;
+}
+/* adjustment of nested menues */
+.wrap-nested-menu:first-child {
+    margin-top: 7px;
+}
+.wrap-nested-menu:not(:first-child) {
+    margin-top: -2px;
+}
