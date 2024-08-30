@@ -2,7 +2,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
 }
-
 :root {
     --white: #FFFFFF;
     --gray-black: #333333;
@@ -10,6 +9,8 @@ body {
     --dark-blue: #135693;
     --light-gray: #EFEFEF;
     --hr-hight: 7px;
+    --padding-menu: 25px;
+    --fs-menu: 1.3rem;
 }
 .container {
     max-width: 1110px;
@@ -39,42 +40,78 @@ body {
     color: var(--light-gray);
     min-width: 100px;
     text-align: center;
-    padding: 20px 30px;
-    font-size: 1.3rem;
+    padding: var(--padding-menu);
+    font-size: 1.1rem;
     cursor: pointer;
+    text-transform: uppercase;
+}
+span.link::after{
+    content: "+";
+    font-size: var(--fs-menu);
+    position: relative;
+    left: 10px;
+    top: 1.5px;
+}
+/* if menu item have span instead of a, add '+' to indicate that it has sub menu */
+.menu-item > span::after {
+    content: "+";
+    font-size: var(--fs-menu);
+    position: absolute;
+    left: 85%;
 }
 .link:hover {
     background-color: var(--light-blue);
-}
-.menu-action {
-    position: relative;
+    transition: all 0.3s ease;
 }
 .wrap-menu {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    display: none;
+    visibility: hidden;
+    opacity: 0.4;
+    transform: translateY(-7px);
 }
-.nav-wrap > li {
+ul.nav-wrap > li {
     position: relative;
 }
-
-.wrap-nested-menu {
+.menu-item, .nested-menu-item{
     box-sizing: border-box;
+    display: inline-block;
     color: var(--light-gray);
     border: 1px solid var(--dark-blue);
     background-color: var(--light-blue);
-    min-width: 100px;
-    text-align: center;
-    padding: 20px 30px;
+    min-width: 200px;
+    text-align: left;
+    padding: var(--padding-menu);
     font-size: 1.3rem;
     cursor: pointer;
 }
 .nav-wrap > li:hover .wrap-menu {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease;
+    transform: translate(0px);
 }
-/* adjustment of nested menues */
-.wrap-nested-menu:first-child {
-    margin-top: 7px;
+.menu-item:hover .wrap-nested-menu {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease;
 }
-.wrap-nested-menu:not(:first-child) {
+.wrap-nested-menu {
+    display: flex;
+    opacity: 0.4;
+    visibility : hidden;
+    flex-direction: column;
+    position: absolute;
+    /* Problem with calc cannot use --padding-menu instead of literal value */
+    transform: translateY(calc(-1.3rem - var(--padding-menu)));
+    left: 100%;
+}
+/* atems adjustments in menu */
+
+.menu-item:first-child {
+    margin-top: var(--hr-hight);
+}
+.menu-item:not(:first-child) {
     margin-top: -2px;
 }
