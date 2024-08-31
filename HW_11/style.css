@@ -32,13 +32,15 @@ body {
 }
 .nav-wrap {
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: center;
 }
 .link {
     display: inline-block;
+    box-sizing: border-box;
     color: var(--light-gray);
-    min-width: 100px;
+    min-width: 200px;
+    height: 70px;
     text-align: center;
     padding: var(--padding-menu);
     font-size: 1.1rem;
@@ -86,6 +88,12 @@ ul.nav-wrap > li {
     font-size: 1.3rem;
     cursor: pointer;
 }
+.menu-item:hover, .nested-menu-item:hover {
+    background-color: var(--dark-blue);
+}
+.menu-item:last-child {
+    border-radius:  0 0 0 15px;
+}
 .nav-wrap > li:hover .wrap-menu {
     visibility: visible;
     opacity: 1;
@@ -103,7 +111,7 @@ ul.nav-wrap > li {
     visibility : hidden;
     flex-direction: column;
     position: absolute;
-    /* Problem with calc cannot use --padding-menu instead of literal value */
+    /* Problem with calc cannot use --fs-menu instead of literal value */
     transform: translateY(calc(-1.3rem - var(--padding-menu)));
     left: 100%;
 }
