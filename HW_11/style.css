@@ -107,7 +107,7 @@ ul.nav-wrap > li {
 }
 .wrap-nested-menu {
     display: flex;
-    opacity: 0.4;
+    opacity: 0.8;
     visibility : hidden;
     flex-direction: column;
     position: absolute;
