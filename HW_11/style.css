@@ -115,6 +115,9 @@ ul.nav-wrap > li {
     transform: translateY(calc(-1.3rem - var(--padding-menu)));
     left: 100%;
 }
+.wrap-menu, .wrap-nested-menu {
+    z-index: 100;
+}
 /* items adjustments in menu */
 
 .menu-item:first-child {
