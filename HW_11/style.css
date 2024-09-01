@@ -123,3 +123,8 @@ ul.nav-wrap > li {
 .menu-item:not(:first-child) {
     margin-top: -2px;
 }
+
+/* user select disable for header and menu */
+.link, .menu-item, .nested-menu-item {
+    user-select: none;
+}
