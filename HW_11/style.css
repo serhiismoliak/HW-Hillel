@@ -115,7 +115,7 @@ ul.nav-wrap > li {
     transform: translateY(calc(-1.3rem - var(--padding-menu)));
     left: 100%;
 }
-/* atems adjustments in menu */
+/* items adjustments in menu */
 
 .menu-item:first-child {
     margin-top: var(--hr-hight);
