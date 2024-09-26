@@ -293,6 +293,7 @@ body {
 .project-block__image {
   width: 100%;
   max-width: 630px;
+  height: auto;
 }
 .project-block__description {
   display: flex;
