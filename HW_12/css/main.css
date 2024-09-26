@@ -86,6 +86,10 @@ body {
   background-color: #fff;
 }
 
+div {
+  overflow: hidden;
+}
+
 .header {
   min-height: min(100vh, 1000px);
 }
@@ -293,7 +297,12 @@ body {
 .project-block__image {
   width: 100%;
   max-width: 630px;
-  height: auto;
+  align-self: center;
+}
+@media screen and (max-width: 1280px) {
+  .project-block__image {
+    height: auto;
+  }
 }
 .project-block__description {
   display: flex;
